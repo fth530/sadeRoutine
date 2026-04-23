@@ -1,0 +1,27 @@
+kind = "mobile"
+previewPath = "/mobile/"
+title = "SadeRutin (Mobile)"
+version = "1.0.0"
+id = "artifacts/saderutin-app"
+router = "expo-domain"
+
+[[integratedSkills]]
+name = "expo"
+version = "1.0.0"
+
+[[services]]
+ensurePreviewReachable = "/status"
+name = "expo"
+paths = [ "/mobile/" ]
+localPort = 24181
+
+[services.development]
+run = "pnpm --filter @workspace/saderutin-app run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/saderutin-app", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/saderutin-app", "run", "serve" ]
+
+[services.env]
+PORT = "24181"
+BASE_PATH = "/mobile/"
