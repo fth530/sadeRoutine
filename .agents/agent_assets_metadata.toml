@@ -1,0 +1,20 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "DFxSE_Cwc-SDfgZr0ZYLj"
+uri = "file://artifacts/saderutin/public/icon-512.png"
+type = "image"
+title = "Soft rounded square app icon"
+
+[[generated]]
+id = "J1or6JP_YIS4Q6ZlgS4kE"
+uri = "file://artifacts/saderutin/public/icon-192.png"
+type = "image"
+title = "Small app icon"
+
+[[generated]]
+id = "k2UeQJwH5yGqojqHxadJv"
+uri = "file://artifacts/saderutin/src/assets/hero-illustration.png"
+type = "image"
+title = "Calm abstract landing hero"

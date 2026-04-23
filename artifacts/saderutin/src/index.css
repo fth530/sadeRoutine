@@ -1,0 +1,145 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-card-border: hsl(var(--card-border));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-popover-border: hsl(var(--popover-border));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-primary-border: var(--primary-border);
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-secondary-border: var(--secondary-border);
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-muted-border: var(--muted-border);
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-accent-border: var(--accent-border);
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-destructive-border: var(--destructive-border);
+
+  --color-chart-1: hsl(var(--chart-1));
+  --color-chart-2: hsl(var(--chart-2));
+  --color-chart-3: hsl(var(--chart-3));
+  --color-chart-4: hsl(var(--chart-4));
+  --color-chart-5: hsl(var(--chart-5));
+
+  --font-sans: 'Outfit', sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: Menlo, monospace;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+/* LIGHT MODE - Soft, warm sand and sage greens */
+:root {
+  --background: 40 20% 97%; /* Warm off-white #f9f8f6 */
+  --foreground: 180 20% 15%; /* Deep dusty teal/grey */
+
+  --border: 40 15% 90%;
+  --input: 40 15% 90%;
+  --ring: 150 20% 60%; /* Sage green */
+
+  --card: 0 0% 100%;
+  --card-foreground: 180 20% 15%;
+  --card-border: 40 15% 90%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 180 20% 15%;
+  --popover-border: 40 15% 90%;
+
+  --primary: 150 20% 50%; /* Sage green */
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 40 25% 90%; /* Warm sand */
+  --secondary-foreground: 180 20% 25%;
+
+  --muted: 40 15% 94%;
+  --muted-foreground: 180 10% 45%;
+
+  --accent: 180 20% 50%; /* Dusty teal */
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 40% 60%;
+  --destructive-foreground: 0 0% 100%;
+
+  --chart-1: 150 20% 50%;
+  --chart-2: 180 20% 50%;
+  --chart-3: 40 30% 70%;
+  --chart-4: 20 40% 75%;
+  --chart-5: 220 20% 60%;
+
+  --radius: 1rem;
+}
+
+/* DARK MODE - Deep, restful, low contrast */
+.dark {
+  --background: 180 15% 10%; /* Very dark dusty teal */
+  --foreground: 40 20% 90%; /* Soft off-white */
+
+  --border: 180 15% 20%;
+  --input: 180 15% 20%;
+  --ring: 150 20% 40%;
+
+  --card: 180 15% 13%;
+  --card-foreground: 40 20% 90%;
+  --card-border: 180 15% 20%;
+
+  --popover: 180 15% 13%;
+  --popover-foreground: 40 20% 90%;
+  --popover-border: 180 15% 20%;
+
+  --primary: 150 20% 45%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 180 15% 20%;
+  --secondary-foreground: 40 20% 85%;
+
+  --muted: 180 15% 18%;
+  --muted-foreground: 40 10% 60%;
+
+  --accent: 180 20% 40%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 40% 50%;
+  --destructive-foreground: 0 0% 100%;
+
+  --chart-1: 150 20% 45%;
+  --chart-2: 180 20% 45%;
+  --chart-3: 40 30% 60%;
+  --chart-4: 20 40% 65%;
+  --chart-5: 220 20% 50%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply font-sans antialiased bg-background text-foreground transition-colors duration-500;
+  }
+}
